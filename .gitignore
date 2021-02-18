@@ -5,6 +5,6 @@ out/
 gradle/
 *.ipr
 *.iml
-*.gradle
 gradlew
 gradlew.bat
+/settings.gradle
