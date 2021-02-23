@@ -8,3 +8,5 @@ gradle/
 gradlew
 gradlew.bat
 /settings.gradle
+/Lesson3/src/test/java/docs/SelenideExamples.java
+/.allure/
