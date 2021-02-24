@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Test;
+import steps.Steps;
 
 public class MethodStepTest {
     final Steps steps = new Steps();

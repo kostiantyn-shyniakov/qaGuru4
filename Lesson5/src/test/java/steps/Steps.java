@@ -1,7 +1,9 @@
-import com.codeborne.selenide.Condition;
+package steps;
+
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -16,9 +18,7 @@ public class Steps {
 
     @Step("Search repository {repository}")
     public void searchForRepository(final String repository) {
-        $(".header-search-input").click();
-        $(".header-search-input").sendKeys(repository);
-        $(".header-search-input").submit();
+        $(".header-search-input").setValue(repository).submit();
     }
 
     @Step("Got to repository {repository}")
@@ -33,6 +33,6 @@ public class Steps {
 
     @Step("Check that Issue with name {name} exists")
     public void shouldSeeIssueWithName(final String name) {
-        $(withText(name)).should(Condition.exist);
+        $(withText(name)).should(visible);
     }
 }
